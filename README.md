@@ -1,1 +1,3 @@
 # QuickRailTicket
+We are developing an application for buying a train ticket. We have a certain number of railway lines that own stations. We also have zones, each of which has its own cost and generates a ticket rate. Each zone has a specific set of stations. 
+We have a starting and ending station. We select them and in the application we are given, for example, three options for how to get from station A to station B. We choose one of the suggested routes. For example, there are three zones between stations A and B on our chosen route, and each has its own cost. We created a fare and bought a ticket, which contains a unique ticket number, departure station, arrival station, buyer's full name and total cost. We can hit the road
