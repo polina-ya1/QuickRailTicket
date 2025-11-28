@@ -1,0 +1,69 @@
+```mermaid
+
+config:
+layout: dagre
+
+classDiagram;
+direction RL;
+    class Passengers {
+		+ int id_of_passengers;
+	    + string name_of_passengers;
+	    + get_buy_tickets(); 
+    }
+    class Tariff {
+	    + int id_of_tariff;
+	    + string type_of_tariff;
+	    + float price;
+	    + bool transfer_limitation;
+	    + bool un_limited;
+	    + calculate_final_price();
+    }
+    class Station {
+	    + int id_of_station;
+	    + string name_of_station;
+	    + double coordinates;
+	    + string branch_name;
+	    + get_available_route();
+    }
+    class Route {
+	    + int id_of_route;
+	    + string name_of_route;
+	    + get_departure_time();
+    }
+    class Validation {
+	    + string time_and_date_of_validation;
+	    + string validation_is_successful
+	    + string validation_failed
+	    + result_of_validation()
+    }
+    class Tickets {
+	    + int id_of_tickets
+	    + string type_of_tickets
+	    + double ticket_purchase_date
+	    + double ticket_end_date
+	    + bool ticket_status
+	    + string departure_station
+	    + string terminal_station
+	    + string date_and_time_of_validation
+	    + on_the_way()
+	    + on_the_way()
+    }
+    class Zone {
+	    + int id_of_zone
+	    + string name_of_zone
+	    + float tariff_multiplier
+	    + calculate_base_fare()
+    }
+    class Transport {
+	    + string electric_train
+    }
+
+    Validation -- Tickets
+    Tickets -- Transport
+    Route -- Transport
+    Station -- Route
+    Zone -- Station
+    Tariff -- Tickets
+    Passengers -- Tariff
+    Passengers -- Tickets
+```

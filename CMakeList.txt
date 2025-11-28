@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.10)
+project(TransportSystem)
+
+set(CMAKE_CXX_STANDARD 11)
+
+add_executable(TransportSystem
+    main.cpp
+    Passengers.cpp
+    Tariff.cpp
+    Station.cpp
+    Route.cpp
+    Validation.cpp
+    Tickets.cpp
+    Zone.cpp
+    Transport.cpp
+)
